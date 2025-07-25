@@ -1,5 +1,5 @@
 [host]
-node01
-node02
-node03
-node04
+node01 apache_package=apache2 php_package=libapache2-mod-php
+node02 apache_package=apache2 php_package=libapache2-mod-php 
+node03 apache_package=apache2 php_package=libapache2-mod-php
+node04 apache_package=httpd php_package=php

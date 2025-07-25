@@ -5,25 +5,11 @@
   become: true
   tasks:
 
-  - name: update repository index Debian
-    apt:
-      update_cache: yes
-    when: ansible_distribution in ["Debian"]
-
-  - name: install apache2 package Debian
-    apt:
-      name: apache2
+  - name: install apache and php
+    package:
+      name: 
+        - "{{ apache_package }}"
+        - "{{ php_package }}"
       state: latest
-    when: ansible_distribution in ["Debian"]
-
-  - name: update repository index CentOS
-    dnf:
       update_cache: yes
-    when: ansible_distribution in ["CentOS"]
-
-  - name: install apache2 package CentOS
-    dnf:
-      name: httpd 
-      state: latest
-    when: ansible_distribution in ["CentOS"]
 
