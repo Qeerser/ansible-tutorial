@@ -6,10 +6,20 @@
   tasks:
 
   - name: install apache and php
-    package:
+    apt:
       name: 
         - "{{ apache_package }}"
         - "{{ php_package }}"
       state: latest
       update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install apache and php
+    dnf:
+      name: 
+        - "{{ apache_package }}"
+        - "{{ php_package }}"
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
 
