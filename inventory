@@ -1,12 +1,12 @@
 [web_servers]
-node01 apache_package=apache2 php_package=libapache2-mod-php
-node04 apache_package=httpd php_package=php
+node01
+node04
 
 [db_servers]
-node02 apache_package=apache2 php_package=libapache2-mod-php 
+node02
 
 [file_servers]
-node03 apache_package=apache2 php_package=libapache2-mod-php
+node03
 
 [workstations]
 localhost apache_package=apache2 php_package=libapache2-mod-php
