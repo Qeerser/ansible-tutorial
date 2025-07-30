@@ -7,3 +7,6 @@ node02 apache_package=apache2 php_package=libapache2-mod-php
 
 [file_servers]
 node03 apache_package=apache2 php_package=libapache2-mod-php
+
+[workstations]
+localhost apache_package=apache2 php_package=libapache2-mod-php
